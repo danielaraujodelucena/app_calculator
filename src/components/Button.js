@@ -11,6 +11,14 @@ import {
     TouchableHighlight,
   } from 'react-native';
 
+export default props => {
+    return(
+        <TouchableHighlight onPress={props.onClick}>
+            <Text style={styles.button}>{props.label}</Text>
+        </TouchableHighlight>
+    )
+}
+
 const styles = StyleSheet.create({
     button: {
         fontSize: 40,
@@ -20,14 +28,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#f0f0f0',
         textAlign: 'center',
         borderWidth: 1,
-        borderColor: '#88*'
+        borderColor: '#888',
     }
 })
 
-export default props => {
-    return(
-        <TouchableHighlight onPress={props.onClick}>
-            <Text style={styles.button}>{props.label}</Text>
-        </TouchableHighlight>
-    )
-}
