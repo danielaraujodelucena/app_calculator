@@ -2,20 +2,22 @@ import React from 'react';
 
 import {
   SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
 } from 'react-native';
 
 import Button from './Button';
+import Display from './Display';
 
 export default () => {
+  state = {
+    displayValue: '0'
+  }
+
   return (
-    <SafeAreaView>
-      <Text>Calculadora</Text>
+    <SafeAreaView style={styles.container}>
+      <Display value={this.state.displayValue} />
       
       <View style={styles.buttons}>
         <Button label='AC' />
